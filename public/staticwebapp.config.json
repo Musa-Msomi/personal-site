@@ -1,0 +1,28 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/android-chrome-*.png",
+      "/apple-touch-icon.png", 
+      "/favicon.*",
+      "/robots.txt",
+      "/sitemap.xml",
+      "/site.webmanifest",
+      "*.{css,scss,js,png,gif,ico,jpg,svg}"
+    ]
+  },
+  "mimeTypes": {
+    ".json": "application/json",
+    ".js": "application/javascript",
+    ".css": "text/css"
+  },
+  "globalHeaders": {
+    "Cache-Control": "public, max-age=31536000, immutable"
+  },
+  "routes": [
+    {
+      "route": "/api/*",
+      "allowedRoles": ["anonymous"]
+    }
+  ]
+}
